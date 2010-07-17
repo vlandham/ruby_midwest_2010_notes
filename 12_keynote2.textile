@@ -1,0 +1,74 @@
+h1. Keynote 2: Yehuda Katz
+
+h2. community
+
+* whats good
+* what could be better
+
+h3. phase 1 : noob
+
+* using an IDE
+* starting with Windows
+* API documentation doesn't reflect the code
+
+h3. phase 2 : plugins
+
+* construction management app
+** datamapper + odbc
+
+* run ruby as a windows service and use datamapper 
+
+h3. open source
+
+* datamapper
+* merb
+** mailer and controller use same super class
+** merb server - precurser to unicorn
+** practice closer to the end of your abilities
+
+h4. bundler
+
+* hard problem
+
+h3. Overall takeaway
+
+* use all the steps in the process to understand how different people will use your code
+
+h3. community strengths
+
+* demand high level of api quality
+** especially for foundational code
+* user experience involves command line
+
+* make your software better by finding out where users are miss-using your code and then make it harder for them to mis-use it 
+
+* basic operations of a tool should not require a manual
+** good error messages
+** hand holding
+
+* leads to a very high level of UX
+** spend a lot of time on smaller problems to make things better 
+** well thought out because rubyists 
+
+h3. community weaknesses
+
+* underrate maturity
+** allows us to change a lot
+*** resque | git | rack | devise
+*** generally good thing
+
+h4. project maturity
+
+* long-term maintainer or successful maintainer hand-off
+* update through several ruby or rails releases
+* underlying spec adherence
+** mail | nokogiri | Sass
+
+* should make project maturity a big component of 
+
+h4. user confusion is a bug
+
+
+
+
+

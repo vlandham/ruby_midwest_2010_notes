@@ -1,0 +1,98 @@
+h1. Redis: Persistence Power
+
+h2. what is redis
+
+* advanced key-value store
+* utility belt for data
+** best used as a compliment with database
+
+h2. basics
+
+* persist data as you think of it
+* stores in memory and then sync in background
+* ridiculously fast
+* master/slave replication
+* keys are all strings
+* values are all data structures
+** hashes
+** sorted hashes
+** lists
+
+h3. try.redis-db.com
+
+h3. use it:
+
+* redis-cli
+
+h3. redis-rb
+
+* gem install redis-rb
+
+h2. use cases
+
+h3. api usage logging
+
+* have an api, find out how often people are hitting each action - but also specific users
+* one way to do it is to store in database
+
+h4. redis way : string
+
+* one way : use strings
+** redis.inc
+
+h4. redis way : sorted set
+
+* sorted set
+** redis.zincrby "actions", 1, key
+
+h4. use
+
+* sorted set = high score list
+* bad at historical usage / trends
+
+h3. rate limiter
+
+* if a certain user hits server - then disable them
+
+h4. memcached
+
+class Choker
+	def restrict?
+		track
+		count_for > 60
+	end
+end
+
+* track
+** adds counter for particular user
+
+h4. redis
+
+* track
+** have to be careful about expire - doesn't work like memcached
+
+h3. job queue
+
+* list queue
+* something resque uses
+
+* namespacing keys is good idea
+
+* atomic actions - no row locking required
+* blocking commands simplify daemons
+
+h4. global errors
+
+* use sets
+* what you need to store arrays
+
+h4. redis transaction
+
+* encapsulate in multi / exec
+
+
+
+
+
+
+

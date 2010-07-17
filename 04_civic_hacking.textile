@@ -1,0 +1,52 @@
+h1. civic hacking
+
+h2. how we can improve government by building apps
+
+* sunlight labs
+** improve government through transpararency 
+** open data + open source = improved government
+** data that government collects can only be collected by government
+
+* pacer
+** have to pay money for public documents
+
+* build useful stuff on top of data
+** opencongress.com
+** gets data from thomas.gov
+** govtrack.us - figured out how to scrape thomas.gov and puts it in a xml
+
+* data.gov
+** data from executive branch of federal government
+
+* national data catalog
+** bring all datasets from all levels in one place
+
+* fly on time - historical data to predict if your flight will be on time
+* quakespotter - ruby processing - written by coffescript guy
+
+* stumble safely dc
+** which streets to avoid 
+
+* wayfinder 
+** augmented reality app for android
+** nysub data to point to nearest sub spot
+
+* government data can be used to start business
+** Example: Weather - all free data - 
+
+* cities
+** governments are starting to put up developer centers
+*** bart rapid transit
+*** MTA
+
+* city centered api
+* 311 - city services
+* open311 - open api on top of the 311 service
+
+* code for america
+
+* recovery.com
+** stimulas money 
+
+
+

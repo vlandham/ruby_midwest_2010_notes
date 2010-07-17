@@ -1,0 +1,113 @@
+h1. interoperable web
+
+h2. what is
+
+* websites all working together automatically rather than having silos of 
+
+h2. ostatus
+
+* collection of standards
+
+h3. 4 standards
+
+* pub sub
+* web finger
+** discovery protocol 
+* salmon
+* activity streams
+
+h3. oAuth 2.0
+
+* will be important in developing interoperable web
+
+h3. status.net
+
+* only place its ostatus is implemented
+
+h3. pubsubhubub
+
+* webhooks
+** if this activity is performed, then ping this website with information
+** friendfeed - early adopter of this standard
+
+* publisher and subscriber and then a hub
+** add link to 
+*** rel="hub" 
+** subscriber registers with hub to listen
+
+* publisher sends new post to hub
+* hub pushes to subscriber
+
+h4. superfeedr
+
+* provides free hub server that you can use
+
+h4. used by
+
+* wordpress
+* google
+* statusnet
+
+h3. webfinger
+
+* standard from google
+* e-mail = identity for most people
+
+* given an email
+** find a bunch of stuff 
+
+h4. how does it work?
+
+* host meta file
+** serves as general well-known
+** file called ".well-known/host-meta"
+
+h4. redfinger
+
+* ruby gem for using this 
+
+h3. Salmon
+
+* unifying the conversations
+* backwards version of push
+* allows link aggregators to publish back 
+* across site comment stream without extra work
+
+h4. no gem in ruby yet
+
+h3. activity streams
+
+* add verb to atom feed
+* easy to implement
+
+h4. used by
+
+* facebook
+* myspace
+* other places
+
+h3. intraoperable web
+
+* distributed control with 
+
+h3. oauth 2.0
+
+* important for site-to-site communication
+* complete re-write of oauth
+** has levels 
+
+h4. web server
+
+* user authenticates host site
+
+h4. user agent
+
+* don't share secret
+
+h4. native app
+
+* one-time username/password use
+
+h3. all work together
+
+

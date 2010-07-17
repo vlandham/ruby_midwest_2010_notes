@@ -1,0 +1,76 @@
+h1. Techniques by Example
+
+h2. Jeremy Evans
+
+h3. xml
+
+* extensible classes
+** can subclass classes
+** goal: override 
+
+* ruby method lookup
+** singleton class of the object
+** modules - reverse order of inclusion
+** superclass
+*** special case: 
+** Object 
+** Kernel
+
+module PersonPlugin
+	module ClassMethods
+	end
+	module InstanceMethods
+	end
+end
+
+class Person
+	plugin Plugin1
+	plugin Plugin2
+end
+
+Person.all
+
+h3. safely defining methods via metaprogramming
+
+* performance vs safety tradeoff with closures
+* can combine them both
+* check input first - separate method for block eval - so that closure doesn't maintain
+
+h3. simple dsl
+
+def validate
+	validates do
+		name do
+			presence
+			max_length 10
+		end
+	end
+end
+
+def validates(&block)
+	
+end
+
+* DSL's - important to derive from BasicObject (ruby 1.9 only)
+* inside basic objects can't access constants 
+
+def self.const_missing(name)
+	::Object()
+end
+
+h3. default arguments
+
+def * (v = (a =true; nil) ) - creates a local variable 
+
+h3. presenting multiple backends
+
+h3. reentrancy
+
+def insert(values)
+	DB.transaction do
+	...
+	end
+end
+
+
+

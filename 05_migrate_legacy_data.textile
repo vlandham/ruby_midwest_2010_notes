@@ -1,0 +1,48 @@
+h1. Migrate Legacy Data
+
+h2. Trucker
+
+* Gem for migrating
+* rake + legacy classes + migration helper
+
+h2. install trucker
+
+* gem install trucker
+* script/generate truck
+
+h2. using
+
+* defining map new => old
+* rake task for migration
+
+h2. other things to think about
+
+* mysql issues - need to SET utf8 -- if you have lat1 encoding
+** don't use non utf8 databases in rails 
+
+h3. Using Java to help migration
+
+* access database? | mssql
+* JDBC adapters 
+** much more plentiful 
+
+h3. MSSQL example
+
+* download mssql driver
+* copy sqljdbc4.jar into RAILS_ROOT/lib
+* add require 'lib/sqljdbc4'
+* add configuration to database
+* jdbc driver is uniform 
+* data mapper - used a lot
+** don't have to use data mapper in  your app to take advantage of the migration capabilities
+
+h3. take it live
+
+h3. links
+
+* github.com/mokolabs/trucker
+
+
+
+
+

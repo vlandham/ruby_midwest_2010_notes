@@ -1,0 +1,158 @@
+h1. welcome
+
+h1. keynote 
+
+h2. goals
+
+* > 166 attendees
+* schedule 
+** single track
+** 19 talks
+
+h2. chris wanstrath - *github*
+
+h3. open source sucks and i'm to blame
+
+* started the company with others
+* open source projects in general
+** whats in common?
+** want bad software to end
+
+h3. minimum amount of work to make an open source project good
+
+* we are all terrible programmers
+* most opensource projects are 'socially' bad
+* whole other side of releasing code -- social 
+** different between distributing and releasing
+** not all opensource is created equal
+
+h3. large projects
+
+* great scalling but most don't apply to us
+
+h3. medium project
+
+* rails / jquery - 
+** jquery has made a big effort to become a good opensource project
+
+h3. small projects
+
+* click2flash, homebrew
+** mostly just a couple of people
+* projects that are just getting better over time
+
+h3. smaller
+
+* ones we release and use the most
+* rubygems
+
+h3. what is the main problem with small programs?
+
+* should have license file
+** get lots of complaints about not having one
+** gpl, etc, - say its opensource
+* installation 
+** way you install a project is really important
+** mysql and postgres
+*** mysql is really to install compared to postgres 
+*** rails video is another example - quick start is the way to go
+*** jquery - jquery no conflicts -- 
+* library for developers ?
+** rubygems - talks to a machine 
+* command line tools
+** api is for a human
+**	installation process 
+** cheat - for example - could have been easy to fully explain the process
+** redis is a good example
+* lack of examples
+** projects with examples - asi http request -  iphone 
+*** just works
+*** examples are what make it great to use
+* public api
+** very important
+** these methods will not go away - or change
+** helps build better software
+* rdoc doesn't count
+** unless it only has your 'real' public api
+* ronn
+** create man page from markdown
+** rolf is what is generated
+** debian - commandline tool without a man page is a bug
+** launchctl - mac osx - man page allows it to be used
+* dependencies
+** one of the hardest things 
+* expectations
+** telling someone what something is for
+** if something doesn't do what it says it does - then its expectations are not met
+** redis - good example of what expectations 
+* projects that aren't maintained
+** say that its not maintained
+* keep feature set small 
+** with new features - keep asking if addition is worth it
+** plugin concept is really good for this 
+*** redis
+*** public api with hooks
+*** plugin documentation
+* program has no users
+** good to indicate in documentation
+* lack of competition is bad
+** projects can benefit by competition
+** delayed job - example
+** resque was created in response to this
+* too few releases is horrible
+** release when bugs are fixed
+* too many releases is bad too
+** git on windows
+** changelog - announce what has been changed
+** hoe can automate this
+* semantic versioning  - semver.org
+** use this 
+** can help build trust
+** god - not using this
+** 1.0 - means using in production
+* readme's
+** meta information
+*** where you go for help
+*** rvm is a good example
+** contributing guide
+*** preferred workflow
+** how to run tests
+* lazy maintainer
+** minimal amount of work
+** showoff - presentation software
+*** great features that others have 
+** feature road map
+* links need to keep updated
+** redis - all documentation as part of download
+* projects with a domain name
+** don't do it
+* google project first
+** resque - typo example
+* poor marketing
+** examples, videocast, etc
+
+h3. projects for inspiration
+
+* redis
+** redis cli
+** demos
+* homebrew
+** one of the most forked 
+* django 
+* unicorn
+** mailist, public api, version numbers, 
+* asi http request
+** great project site
+
+h3. have in common
+
+* good maintainers
+** people using their brains
+
+h3. life is too short to release crappy software
+
+* most of these steps 
+* unittest suite is running
+
+
+

@@ -1,0 +1,40 @@
+h1. Integration Testing Strategies
+
+* calculated cumbustion
+* advisors hq
+
+* integration testing != continuous testing
+** used to test the integration among any number of controllers
+** test important 
+
+* RoR has it built in
+** Cons
+*** doesn't click form buttons
+*** doesn't address ajax
+
+h2. capybara
+
+* does perform real clicks
+
+* cons
+** doesn't work with flash
+** some limitations with javascript
+
+h2. specjour
+
+* distributed testing using bonjour
+* can be used with capybara
+
+h2. cloud options
+
+* solutions that can run on multiple OS's
+
+h3. Selenium shots
+
+* cross operating system and browser
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+h1. Pragmatic Guide to Git
+
+h2. git is easy
+
+h3. git help [some command]
+
+* git config --global color.ui auto
+** turn on color
+
+h3. repository
+
+* repository creation
+** git init
+* clone
+** git clone
+
+h3. daily work
+
+* see whats changed
+** git status
+
+h3. stating changes
+
+* git stuff into the repository
+
+h3. adding changes
+
+* git commit
+* returns a hash to avoid ambiguity of version numbers
+* git config to set your editor
+
+h3. sharing changes
+
+* git push origin master
+
+* getting changes
+** git pull 
+
+h3. git branches
+
+* in git, branch is a pointer to a particular commit
+** all commits know the commits before it 
+
+* git brach
+** shows list of branches
+
+h4. create new branch
+
+* git branch new-branch-name
+
+h4. switching branches
+
+* git checkout 
+
+h3. merging
+
+* check out branch you want to merge into
+** call git merge on the branch you want to merge
+
+h4. merge types
+
+* fast forward
+** newest-branch has all contents of master
+** so just move up pointer of master to newest-branch
+
+* recursive
+** master has new content not on newest-branch
+
+h3. rebasing
+
+* more misunderstood parts of git
+* start in new branch
+** replays new content of master on new branch
+
+h3. deleting branches
+
+* git branch -d branch-name
+* if we try to delete a branch before 
+** git branch -D new-branch
+** force delete
+
+h3. teamwork
+
+* remote repository
+** just special case branches
+** read-only
+
+* remotes
+** named remote repositories
+
+* adding remotes
+** git remote add [remote] [url]
+
+* remove remotes
+** git remote rm [remote]
+
+h3. fetching changes from remote repositories
+
+* git fetch [remote]
+
+* git branch -r 
+** return list of remote branches
+
+* when fetching, you still have to merge
+
+h3. Pulling
+
+* executes a fetch and then a merge for you
+
+h4. pulling part 2
+
+* want to rebase local changes 
+* git pull --rebase [remote] [branch]
+
+h3. pushing
+
+* git push [remote] [branch]
+
+h3. Team workflow
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+h1. experience driven design
+
+h2. with a bit of tenacity - you too can be an expert
+
+h2. getting started
+
+* consumption
+
+h3. leads to a bit of contribution
+
+* patches 
+* exploration
+
+h3. try new things
+
+* merb 
+* datamater
+* couch
+
+* contribute
+
+h3. competition is good
+
+h3. issues
+
+* keep coming back for more
+* the effort is worth it
+
+h2. suggestions
+
+h3. prototypes
+
+* one file things to try out stuff
+
+h3. monkey path
+
+* bad  - creates load order dependency
+
+h3. tutorialize
+
+* helps create personoal connection
+* documentation is important
+
+h3. encourage contributers
+
+* schwag
+** stickers
+* keep consistency in your code
+* keep library focused 
+* make tools
+** gestalt - trace library
+** shindo - test framework
+** tach - benchmark
+
+
+
+
+
+

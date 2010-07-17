@@ -1,0 +1,136 @@
+h1. mongo db 
+
+* optimisDev - medical systems
+
+h2. brief intro to mongoDB
+
+h3. strengths
+
+* schema-less - great for rapid development
+* makes things possible that are hard in rdbms
+** sentence builder
+
+h3. document oriented
+
+* storing documents instead of rows
+** really json documents
+* allows for rich query syntax
+* embed documents into other documents
+** eliminate many modeling headaches
+
+h3. big data
+
+* built to scale horizontally into the cloud
+* auto-sharding
+** set a shard-key - a cluster of nodes - go
+** still in alpha
+
+h3. fast writes
+
+* fire and forget write system
+* can get a response from this
+* in place updates
+* lots of db commands for fast updates
+
+h3. aggregation
+
+* map/reduce support for aggregation
+* reads fast too
+** stores in memory-mapped b-tree
+** optimize reads using index like a rdbms
+
+h3. not good at
+
+* joins
+* foreign key constraints
+
+h2. practical projects
+
+h3. accounting application
+
+* object model
+** ledger contains transactions contains 2 or more entries (credit or debit)
+** every line item belongs to a ledger. credits and debits must balance
+
+h4. in mongo
+
+* embedded document inside a document
+** "contains many" - concept allows for embedded document idea
+
+h3. logging with capped collections
+
+* collection is like a table in rdbms
+** capped collection is a fixed sized set
+
+* problem with logs - usually sit on disk somewhere
+** 95% of logs are never used
+** mostly used when something goes wrong
+
+h4. mongo
+
+* tack on more info when we need it
+* great so we avoid database stores 
+* query analyze and then profit
+
+h4. hummingbird
+
+* cool project to checkout
+
+h4. user reported errors are difficult to diagnose
+
+* bunyan - wraps up creation of a caps collection for you
+* singleton 
+
+h4. papermill
+
+* graph uses map/reduce to count
+
+h3. blogging application
+
+h4. mongomapper
+
+* similar to datamapper
+* not inheritance-based
+* very easy to drop into rails
+
+h4. interesting part for mongoDB
+
+* use an array for tags
+
+h3. reporting app
+
+* reporting is hard
+** synchronization
+
+h4. why mongo here?
+
+* aggregation support
+** map/reduce great for analyzing
+* big data
+* schemaless is perfect for flattened data set
+
+
+h2. case of mongoDB
+
+* problems of sql
+** developed a long time ago
+** we work with objects  - not data
+** he doesn't think data != objects
+
+* active record | datamapper | sequel
+** great tools to try to cope with these issues
+** this is not efficient 
+
+
+h2. usinig mongo
+
+* Ruby mongo driver
+* *mongomapper* 
+* mongoID
+
+h3. sentence builder == text template
+
+* different fragments like
+** "a patient"
+
+

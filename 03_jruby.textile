@@ -1,0 +1,73 @@
+h1. jRuby
+
+* ruby on the jvm
+* 1.5.1 - latest release
+* 1.9.2 update coming
+* all gems are running for a while
+
+h2. cool stuff
+
+h3.	Native threads
+
+* real concurrency
+** Thread.new
+** can have one process utilize all cores of machine
+
+* server for jRuby : trinidad
+* using ab - benchmark tool
+** apache benchmark
+** -c - concurrency 
+
+* you can just run one process
+
+* -J-Xmx128M (limiting to 128M JVM)
+
+h3. Scaling Rails
+
+* jRuby is the easy way to scale rails
+
+h3. Platform Integration
+
+* use any java library like its a ruby library
+* No-compile - single file deployments
+* Cross-platform GUI libraries
+** SWT/ ... etc
+** require 'java' 
+** import whatever
+** use it wherever java is used
+
+h3. Tooling and Maturity
+
+* IDE support
+* debugging suport
+* profiling memory tools
+
+h4. Tooling
+
+* -J-Xrunhprof:format=b,depth=15
+**  generates java.hprof
+* jhat -J-Xmx200M java.hprof
+* jvisualvm
+
+h3. New Frontiers
+
+* google AppEngine
+** bunch of tools for this
+* android
+
+h3. Android
+
+* ruboto IRB
+
+h3. questions
+
+* generate java class from ruby - in jruby 1.5
+* 
+
+
+
+
+
+
+
+

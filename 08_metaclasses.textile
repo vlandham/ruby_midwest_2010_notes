@@ -1,0 +1,53 @@
+h1. Metawhat? look into mysterious metaclasses
+
+h2. class << self
+
+* define class method
+
+h2. object in ruby
+
+* struct with RBasic
+** RBasic - struct with klass
+* and instance variable table
+
+* collection of instance variables and a pointer to a class
+
+* objects don't have methods
+** so where are the methods?
+
+h3. class
+
+* contents the same as a object, but with a table of methods and a super pointer
+
+h3. method dispatch
+
+* follow my class pointer
+* check the methods table for my method
+* follow super pointer if necessary
+
+h3. define function just for instance
+
+* must be another class in ruby
+** singleton class
+** define instance specific behavior 
+** Eigenclass
+
+* "metaclass"
+** singleton class of a class
+
+h3. request singleton class
+
+* 1.9 
+** joe.singleton_class
+** joe.define_singleton_method
+
+h3. def works a bit strangely
+
+* def ddd
+** define on self
+* def self.ddd
+** define on the singleton of self
+
+* class << self
+** opens singleton class of class (metaclass)
+

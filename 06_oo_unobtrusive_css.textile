@@ -1,0 +1,74 @@
+h1. object oriented unobtrusive css
+
+* why? 
+** ruby community leading charge of innovation 
+
+h3. unobtrusive css
+
+* true separation between presentation and content
+* no presentational classes in your HTML
+* possible with sass
+** can be done incrementally
+** can be done on legacy code
+
+h4. example
+
+* clearfix 
+** container that usually goes into the html 
+** not as semantic as it could be
+
+h3. why unobtrusive?
+
+* implementation is faster
+* change design is faster
+** can swap out css 
+
+h3. unobtrusive is hard
+
+* repetitive selectors
+** not too DRY
+** Example: progress bar
+* CSS lacks abstraction
+** classes are not for style reuse
+* difficult to control layout
+** grid layouts are great but requires lot of careful pre-planning
+** if don't use frameworks - must calculate by hand
+
+h3. css frameworks
+
+* make it easy to make grid layouts
+* best practices | reset css | 
+** these are all good
+
+h4. Problems:
+
+* nothing more than css snippets
+* tight coupling between presentation and content 
+* almost as bad as table layouts
+
+h3. css meta frameworks
+
+* css with more concepts
+
+h4. sass
+
+* css3 compatible
+* nested rules
+* variables
+* mixins 
+* compiles & outputs css
+* firebug integration
+
+h5. new sass syntax
+
+* sass syntax is css3 compatible - similar to scss
+
+h5. selector inheritance
+
+* newer feature
+
+
+
+
+
+

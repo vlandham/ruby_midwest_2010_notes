@@ -1,0 +1,71 @@
+h1. chef: cooking 101
+
+h2. what is
+
+* configuration management
+* framework
+* api
+* fully automate your infrastructure 
+
+h2. at 37signals
+
+* 100 OS installations
+* 15 rails applications
+* normal rails stack
+** haproxy
+
+* all this managed by chef
+
+h2. why chef?
+
+* economical
+* efficient
+* scaleable 
+* repeatable
+* flexible 
+
+* over the long term - this pays off
+
+h2. how it works
+
+* couchdb in backend
+* rabbitMQ to talk to apache solr
+* Knife | web interface | nodes on clients
+
+h2. anatomy of a node
+
+* node is a server on the network
+
+h2. cookbooks
+
+h2. resources
+
+* what makes chef interface with your system
+
+h2. attributes
+
+* settings to be tuned later on
+* persist over chef runs
+
+h2. templates
+
+* ERB files
+
+h2. definitions
+
+* string different resources together
+* use if your repeating things in your receipe 
+
+h2. libraries
+
+* arbitrary ruby code to extend chef
+* automatically required for you
+* can plug in chef to your existing infrastructure
+
+h2. data bags
+
+* JSON data to be accessed later
+* global info
+* load directly or use search interface
+
+

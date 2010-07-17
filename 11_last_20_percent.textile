@@ -1,0 +1,46 @@
+h1. surviving the last 20% 
+
+h2. graph api
+
+* new API
+** hyper graph
+** fgraph
+* old API
+** facebooker
+
+
+h2. what does this last part include?
+
+* limits in the application type
+** fbml & iframe are the options
+* browser inconsistencies 
+* facebook API gotchas & Performance concerns
+
+h2. types
+
+h3. fbml
+
+* code rendered directly within FB chrome
+* access to many FB widgets
+* cookies and sessions just work
+
+* performance issues
+* no support for modern js frameworks
+* FB caches your assets and stylesheets 
+
+h3. iframe
+
+* develop using the full spectrum of html
+* faster
+* access to favorite FBML application
+* favorite JS framework
+
+h3. hybrid
+
+* IFRAME + XFBML + Facebook Connect 
+
+
+
+
+
+
