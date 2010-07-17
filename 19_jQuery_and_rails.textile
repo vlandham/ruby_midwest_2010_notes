@@ -1,0 +1,102 @@
+h1. jQuery and Rails 
+
+h2. intro
+
+* simple because its repetitive
+* select some html elements | call methods on them | repeat
+
+h3. $
+
+* used by many jquery libraries
+* just a function
+* nothing special about it
+
+* in jquery - same as jQuery()
+* return jquery wrapper
+* can pass:
+** css selector
+** dom element
+** html string
+** function
+** nothing
+
+h3. jquery wrapper methods
+
+* lots of them
+* jquery API is mostly these
+* don't care how many elements are returned
+** work on collection same as individual
+* easy to define your own
+** make sure you return this
+
+h3. events
+
+* obtrusive javascript - adds javascript to html
+** not powerful
+*** only one click event handler
+* unobtrusive
+** have hook into element 
+*** call bind and then name of the event
+*** then can define what to do
+
+h4. event problem
+
+* if more links are added dynamically - event won't be added
+
+* *solution*: use live instead of bind
+
+h3. pass function to $
+
+* execute when the page is ready
+
+h2. jQuery with Rails 3
+
+* 4 things need to do
+** include right javascript files
+*** jquery.js and rails.js
+*** jquery-ujs - jquery version of rails.js
+** include meta tags
+** :remote => true
+*** other options are confirm and method
+*** replace the link_to_remote ... etc
+** respond to javascript request
+*** rjs files are still promoted way
+**** still have to write javascript - so no point
+*** alternative?
+**** erb
+**** just have to use to_json
+
+h2. jQuery with Rails 2
+
+* jrails
+** no one should use
+
+* still include jquery.js and rails.js
+* still use .js.erb templates
+
+* can steal implementation of csrf meta tags
+* remote true - just pass 'data-remote' to link
+** no reason for link_to_remote
+
+h2. Beyond the Rails (Ajax) Way
+
+* rails assumes that every request gets responded to with executable javascript
+* other ways to respond:
+** html
+** xml (if we were in 2005)
+** json
+
+* when you respond with json  - don't have all little rjs templates
+** get clean api between browser and app
+** with json - have larger context
+
+h3. how?
+
+* give 'data-type' to link
+* use render_to_string 
+
+h2. summary
+
+* jquery is simple but powerful
+* can be unobtrusive in both rails 2 and rails 3
+** not javascript helpers
