@@ -1,0 +1,83 @@
+h1. New set of wheels: leveraging ruby for systems administration 
+
+h2. take away
+
+* stuff you can do to improve your life - even within your own laptop
+
+h2. scope - scripting languages
+
+* perl - is still used everywhere
+* python - redhat deployment 
+* php - as a sys admin tool? 
+** sometimes just what people knew, so they used them
+* ruby - same time as php - slow US startup time
+
+h2. why ruby
+
+* instant gratification programming
+* speed to implement
+* object oriented 
+** sys-admins build toolboxes.
+** same kinds of patterns as other developers
+* readability and maintainability - critical 
+
+h2. why not?
+
+* right tool for the job
+** not always the case
+* memory requirements
+** can be an issue
+* performance
+** jruby could help
+
+h2. ways of the administrator
+
+* shell scripting
+** need to do sed/awk type things
+** text replacement and polling
+** ruby goes above and beyond 'pipe-fitting'
+** glue - ties applications together
+** SCM's are your friend
+
+h2. ruby applications
+
+* god - monitoring
+* capistrano - good for deploying other things than just rails apps
+* chef / puppet - system configuration
+* homebrew - os x package manager
+
+h2. non-ruby apps
+
+* plug-ins
+* more glue
+
+h2. examples
+
+h3. grep-fu
+
+* gem 
+* uses find 
+* runs fast
+
+h3. setup pairing stations
+
+h3. what does he use
+
+* capistrano
+* new relic
+* nokogiri
+* fastercsv
+* pl_analyzer & request_log_analyzer
+* lots of custom ruby scripts
+
+h3. non ruby
+
+* nagios
+* munin - trending
+* tsung - load testing
+
+
+
+
+
+
