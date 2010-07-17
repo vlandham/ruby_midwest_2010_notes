@@ -110,4 +110,4 @@ h4. native app
 
 h3. all work together
 
-
+* some current negatives but in the end this will be worth it
