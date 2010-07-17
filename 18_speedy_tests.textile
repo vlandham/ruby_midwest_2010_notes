@@ -1,0 +1,89 @@
+h1. speedy tests
+
+h2. slow test suites
+
+* drain your teams morale
+* leads to arguments about fault
+* leads to a time sink
+* starts to become part of your life
+* makes you hate testing
+** backlash against testing 
+
+h2. solutions
+
+h3. solutions where you don't have to change bad habits
+
+h4. use all your cores
+
+* parallel_tests
+* tickle
+* specjour
+* deep test
+* *hydra* - one db, ssh, rsync, split on duration
+
+h4. turn off journal write back
+
+* can be turned off on Linux
+
+h4. say no to atime
+
+* turn this off in Unix OS's
+
+h4. fast_context
+
+* can just be used with shoulda
+* works if your tests are atomic and don't affect state
+
+h4. Ruby Enterprise Edition
+
+* have access to GC settings
+** can jack it up so that you don't have GC running
+** saved +10 minutes at groupon
+
+h4. graph your system cpu/io
+
+* can look for opportunities to optimize
+* profile your tests
+
+h4. Grease your Suite
+
+* Nick Gauthier
+* grease-your-suite.heroku.com
+
+h3. Tests and how to improve
+
+h4. mocking
+
+* the cause of and solution to all your tests' problems
+* stub out the expensive stuff
+* not going to be good starting out with mocking and stubbing
+** just like writing testing in general
+
+h4. before :each
+
+* big set up is a big problem
+* nested contexts are being utilized when they don't need to be
+* may be indicative of an object being too complex
+
+h4. thoughtbot
+
+* factoryGirl is too awesome
+
+h4. create vs build
+
+* build doesn't go to database
+** use this if you can
+* can use build often if you are using mocking and stubbing
+
+h4. tricky test suites
+
+* can't just make something tricky  need to document
+
+h4. think about test's speed as you write it
+
+* testing is a thoughtful process
+
+h3. tests are supposed to lead to better design
+
+* tenant of BDD?
+

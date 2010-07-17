@@ -1,0 +1,120 @@
+h1. memprof
+
+h2. memory profiler for ruby
+
+* primarily for MRI and ruby 1.8
+
+h2. memory in ruby
+
+* carves up memory in VM into slots
+* has linked list called "freelist"
+** points to all empty slots on ruby heap
+* when freelist is empty GC is run
+** if GC can't empty any - allocates new larger heap
+
+h2. GC
+
+* conservative
+** the VM hands out raw pointers to ruby objects
+* stop the world
+** no ruby code can execute during GC
+* mark and sweep
+** must scan all objects to find which ones are not in use
+
+* GC doesn't scale well with large amounts of objects
+** fewer objects -> better performance
+
+h2. improve performance
+
+* remove unnecessary object allocations
+* avoid leaked references
+** not really 'memory leak' 
+** as long as class A is in use, all its contents are still in memory
+
+h2. useful tools
+
+h3. ObjectSpace.each_object
+
+* can use to aggregate class types that exist on the heap
+* issues that are fixed in Ruby 1.9
+
+h3. gdb.rb
+
+* set of hooks for gdb for REE
+* allows the inspection of heap
+** nodes in 1.8 represent ruby code itself
+** in rails nodes could take up 
+
+* can be used to find leaks 
+** ruby objects classes
+** ruby objects arrays
+
+h3. bleak_house_
+
+* first major ruby gem to help find leaks in ruby code
+* installs custom patch version of the ruby interpreter 
+* tells you where the leak is happening
+
+h3. heap dumping patches
+
+* want to dump contents of strings
+
+h3. memprof
+
+* combination of previous techniques and tools
+
+h4. goals
+
+* easy to use
+* detailed
+** include references between objects
+* simple analysis
+** for output format
+** JSON used
+
+* works only on 64-bit machines
+
+h4. works
+
+* rewrites your ruby binary in memory
+
+h4. features
+
+* track
+** similar to bleak_house
+* dump
+** like track but with more info
+** get internal representation of objects
+** shows memory addresses for pointers to other objects
+* dump_all
+** provide json filename
+** dumps every single live object as json
+** can analyze with what ever you want to 
+
+h4. memprof.com
+
+* analyzer for this json dump
+* can be used to find large objects
+* follow references
+
+h3. fixing leak in rails 3
+
+* leaking 10mb per request
+* in dev mode
+
+* use ab to send requests
+* tell memprof to dump out entire heap
+* check duplicate classes by name
+** saw 30 copies of testcontroller
+*** look at one of them
+**** see hash with 30 elements
+**** holding a reference to all test controllers
+
+* caching code was holding a reference to every single reloaded version of those controllers
+** just use name for key - this way you would only store one
+
+h3. recap
+
+* more objects = longer GC
+* = less time for ruby code to run
+
